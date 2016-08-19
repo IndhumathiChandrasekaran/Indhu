@@ -13,6 +13,7 @@ public boolean iso()
 	String str1=s.next();
 	String str2=s.next();
     int[] pos=new int[2];
+    int count=0;
     if(str1.length()==str2.length())
     {
 	for(int i=0;i<str1.length();i++)
@@ -23,13 +24,11 @@ public boolean iso()
 				{
 					pos[0]=i;
 					pos[1]=j;
+					count=1;
 				}
 			}
-	}
-	for(int i=0;i<str2.length();i++)
-	{
-		for(int j=i+1;j<str2.length();j++)
-		{
+	}       if(count==1)
+	        {
 			if(str2.charAt(pos[0])==str2.charAt(pos[1]))
 			{
 				return true;
@@ -39,7 +38,6 @@ public boolean iso()
 				return false;
 			}
 		}
-	}
    }
    else
    {
