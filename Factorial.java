@@ -1,11 +1,18 @@
-import java.util.*;
-class Factorial{
-public static void main(String[] args){
-Scanner s=new Scanner(System.in);
-int i=s.nextInt();
-int r=1;
-for(int y=i;y<=1;y--){
-r*=y;
+package LogicBuilding;
+
+import java.util.Scanner;
+
+public class Factorial {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		int num=s.nextInt();
+		int result=1;
+		for(int i=1;i<=num;i++)
+		{
+			result*=i;
+		}
+System.out.println(result);
+	}
+
 }
-System.out.println(r);
-}}
